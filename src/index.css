@@ -1,0 +1,324 @@
+@import "tailwindcss";
+
+
+body{
+  overflow-x: hidden;
+}
+.front-page-bg {
+  background: linear-gradient(to right, rgb(20, 12, 27), rgb(10, 10, 19));
+}
+
+::selection{
+ background: #9499f1;
+ color: rgb(48, 48, 48);
+}
+
+
+#cartoon {
+  width: 45vh;
+  filter: drop-shadow(15px 15px 40px rgb(28, 26, 50));
+}
+section{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url("https://i.postimg.cc/c1Q3njM0/bg2.jpg");
+  background-size: cover;
+  animation: animateBg 50s linear infinite;
+}
+
+@keyframes animateBg{
+  0%,100%{
+      transform: scale(1);
+  }
+  50%{
+      transform: scale(1.2);
+  }
+}
+
+#section span{
+  position: absolute;
+  top:50%;
+  left:50%;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.1),0 0 0 8px rgba(255,255,255,0.1),0 0 20px rgba(255,255,255,0.1);
+  animation: animate 3s linear infinite;
+}
+#section span::before{
+  content:'';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg,#fff,transparent);
+}
+@keyframes animate
+{
+  0%
+  {
+      transform: rotate(210deg) translateX(0);
+      opacity: 1;
+  }
+  70%
+  {
+      opacity: 1;
+  }
+  100%
+  {
+      transform: rotate(210deg) translateX(-1000px);
+      opacity: 0;
+  }
+}
+#section span:nth-child(1){
+  top: -50px;
+  right:100%;
+  left: initial;
+  animation-duration: 3s;
+}
+#section span:nth-child(2){
+  top: 0px;
+  right: 700px;
+  left: initial;
+  animation-duration: 3s;
+}
+#section span:nth-child(3){
+  top: 0px;
+  right: 1300px;
+  left: initial;
+  animation-duration: 2.25s;
+}
+#section span:nth-child(3){
+  top: 140px;
+  right: 1350px;
+  left: initial;
+  animation-duration: 2.75s;
+}
+#my-name{
+  background: linear-gradient(to top , rgb(170, 170, 170) , rgb(16, 16, 49));
+  -webkit-background-clip: text;
+  font-size: 40px;
+  color: transparent;
+}
+.frontend-dev{
+  font-family: 'Rouge Script';
+}
+#bottom-shadow{
+  filter: blur(20px);
+  bottom: -50px;
+}
+#Page2{
+  background: #242424;
+}
+.links{
+  border-radius: 20px;
+  box-shadow: inset 0 0 30px black;
+}
+.links div{
+  height: 80%;
+  display: flex ;
+  align-items: center;
+  justify-content: center;
+}
+.Several-Links .Link{
+
+  padding: 10px 15px 10px 15px;
+  border-radius: 10px;
+  background: rgb(87, 87, 87);
+  position: relative;
+  z-index: 4;
+}
+.Several-Links .Link.active{
+  background: rgb(248, 228, 8);
+  box-shadow: 0 0 10px yellow;
+}
+.decoration-text{
+  text-decoration: underline;
+}
+.About-Me span{
+  color: rgb(77, 77, 250);
+ font-weight: bold;
+}
+.my-work span{
+  color: rgb(77, 77, 250);
+  font-weight: bold;
+}
+.my-work li{
+  margin-left: 20px;
+}
+
+#Contact-btn {
+  width: 300px;
+  height: 60px;
+  position: relative;
+  z-index: 1;
+  background: #1d4ed8; 
+  color: white;
+  font-weight: bold;
+  overflow: hidden;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out; /* Smooth background transition */
+}
+
+#Contact-btn::before {
+  content: '';
+  width: 300%;
+  height: 100%;
+  position: absolute;
+  top: 100%;
+  left: -300%;
+  z-index: -1;
+  background: linear-gradient(90deg, green, yellow, blue, green);
+  transition: transform 3s ease-in-out;
+  animation: circularMove 6s linear infinite ;
+}
+#Contact-btn:hover::before{
+  top: 0;
+}
+@keyframes circularMove {
+  0% {left: -320%}
+  100%{left: 100%;}
+}
+
+@keyframes skillAnime {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.group #index0, .group2 #index0,
+.group #index1, .group2 #index1,
+.group #index2, .group2 #index2, 
+.group #index3, .group2 #index3 {
+  animation: skillAnime 3s ease-in-out infinite;
+  will-change: transform;
+  transform: translateZ(0);
+}
+.wave {
+  width: 30px;
+  display: inline-block;
+  animation: waveAnimation 1s infinite alternate;
+}
+
+@keyframes waveAnimation {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(20deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.Shake{
+  animation: shake .6s ease-in-out infinite;
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+}
+
+.plane{
+  animation: plane 1s linear infinite;
+}
+
+@keyframes plane {
+  0% {
+    transform: translate(0, 0) rotate(20deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(110vh, -50vh);
+    opacity: 0;
+  }
+}
+.swiper-pagination-bullet {
+  background-color: white !important; 
+  opacity: 0.6; 
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgb(21, 26, 43) !important; 
+  opacity: 1;
+}
+.mySwiper .swiper-slide{
+ height: 70vh;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px black;
+}
+#image-divs div{
+  background: #202020;
+  box-shadow: 0 0 10px black;
+}
+.btn {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  background: linear-gradient(to right , rgba(20, 20, 20, 0.83), rgb(21, 17, 34));
+  border: 1px solid #91C9FF;
+  outline: none; 
+  transition: 1s ease-in-out;
+}
+
+.btn svg{
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn span {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+}
+.proj-btn:hover{
+  box-shadow: 0 0 10px black;
+  transition: .5s;
+  cursor: pointer;
+}
+.custom-cursor {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background :rgb(17, 17, 43);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  animation: fadeOut 0.5s forwards;
+  z-index: 999;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; transform: scale(.5); }
+  100% { opacity: 0; transform: scale(2); }
+}
