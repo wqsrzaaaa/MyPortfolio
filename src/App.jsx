@@ -74,13 +74,13 @@ const App = () => {
           </div>
 
           <Routes>
-              <Route path="/MyPortfolio" element={<Navigate to="/MyPortfolio/home" replace />} />
-              <Route path="/MyPortfolio/home" element={<About />} />
-              <Route path="/MyPortfolio/skills" element={<Skills />} />
-              <Route path="/MyPortfolio/work" element={<Work />} />
-              <Route path="/MyPortfolio/portfolio" element={<Portfolio />} />
-              <Route path="/MyPortfolio/contact" element={<Contact />} />
-              <Route path="/*" element={<Error />} />
+            <Route path="/" element={<Navigate to="/home" replace />} />
+            <Route path="/home" element={<About />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/work" element={<Work />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route   to = "*" element={<Error />} />
          </Routes>
 
           <footer className="w-full h-[15vh] flex items-center justify-evenly text-white bg-zinc-950">

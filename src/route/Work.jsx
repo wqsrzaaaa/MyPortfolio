@@ -195,7 +195,7 @@ const Work = () => {
             </div>
 
             <button   onClick={() => {
-                        navigate('/MyPortfolio/portfolio', { state: { 
+                        navigate('/portfolio', { state: { 
                           title: e.title, 
                           img: e.img, 
                           imgMbl : e.imgMbl,
