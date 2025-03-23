@@ -9,7 +9,7 @@ const Error = () => {
         Oops! The page you are looking for doesn't exist.
       </p>
       <Link
-        to="/"
+        to="/MyPortfolio/"
         className="mt-5 px-6 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition-all"
       >
         Go Back Home

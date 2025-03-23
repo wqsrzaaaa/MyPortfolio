@@ -195,7 +195,7 @@ const Work = () => {
             </div>
 
             <button   onClick={() => {
-                        navigate('/portfolio', { state: { 
+                        navigate('/MyPortfolio/portfolio', { state: { 
                           title: e.title, 
                           img: e.img, 
                           imgMbl : e.imgMbl,
@@ -244,6 +244,7 @@ const Work = () => {
                 </SyntaxHighlighter>
           </div>
            <div className='md:w-[600px] w-[95%]  flex flex-col items-center gap-5'>
+           <p>CSS</p>
               <SyntaxHighlighter
                 className ='w-full h-[80vh] overflow-y-scroll'
                 language='javascript'

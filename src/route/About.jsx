@@ -34,7 +34,7 @@ const About = () => {
                   <li><span>Optimize Performance </span>- Faster load times and better user engagement.</li>
                   <li><span>Bring Ideas to Life </span> - Turn your vision into a fully functional digital product..</li>
                 </ul>
-                <NavLink to={'/contact'} id='Contact-btn'>Let's create something amazing!</NavLink>
+                <NavLink to={'/MyPortfolio/contact'} id='Contact-btn'>Let's create something amazing!</NavLink>
              </div>
         </div>
       </div>

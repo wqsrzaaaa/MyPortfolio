@@ -24,7 +24,7 @@ const Page1 = ({effectCursor , seteffectCursor}) => {
             <span></span>
         </section>
         </div>
-        <img id='cartoon' className='absolute bottom-0 shadow-lg left-1/2 -translate-x-1/2' src={cartoon} alt="" />
+        <img id='cartoon' className='absolute pointer-events-none bottom-0 shadow-lg left-1/2 -translate-x-1/2' src={cartoon} alt="" />
     
 
         <div 
