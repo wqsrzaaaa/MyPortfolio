@@ -68,7 +68,7 @@ const App = () => {
         <Page1 effectCursor={effectCursor} seteffectCursor={seteffectCursor} />
         <div id="Page2" className="w-full">
           <div className="w-full h-[200px] flex items-end justify-center gap-5">
-            <div className="md:w-[60vh] w-[40vh]  h-[70px] bg-zinc-800 flex items-center justify-evenly links">
+            <div className="md:w-[60vh] w-[44vh]  h-[70px] bg-zinc-800 flex items-center justify-evenly links">
               <MyRoute />
             </div>
           </div>

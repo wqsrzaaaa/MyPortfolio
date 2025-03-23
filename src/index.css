@@ -126,16 +126,11 @@ section{
   justify-content: center;
 }
 .Several-Links .Link{
-  width: 45px;
-  height: 45px;
   padding: 10px 15px 10px 15px;
   border-radius: 10px;
   background: rgb(87, 87, 87);
   position: relative;
   z-index: 4;
-}
-.Link #img{
- scale: 1.3;
 }
 .Several-Links .Link.active{
   background: rgb(248, 228, 8);
