@@ -58,7 +58,7 @@ const App = () => {
       requestAnimationFrame(raf);
   
       return () => {
-        lenis.destroy(); // Cleanup to prevent memory leaks
+        lenis.destroy(); 
       };
     }, []);
     
@@ -83,7 +83,7 @@ const App = () => {
             <Route   to = "*" element={<Error />} />
          </Routes>
 
-          <footer className="w-full h-[15vh] flex items-center justify-evenly text-white bg-zinc-950">
+          <footer className="w-full h-[15vh] relative z-9 flex items-center justify-evenly text-white bg-zinc-950">
             <a className="flex flex-col md:flex-row items-center gap-2">
               <BiLogoGmail className="text-2xl" /> wqsrza07@gmail.com
             </a>

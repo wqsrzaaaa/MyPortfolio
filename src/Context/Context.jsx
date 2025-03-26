@@ -11,7 +11,8 @@ import weathermbl from '../assets/weathermbl.jpg'
 import redefinembl from '../assets/redefinembl.jpg'
 import coffeembl from '../assets/coffeembl.jpg'
 import needlembl from '../assets/needlembl.jpg'
-
+import Gemini from '../assets/Gemini.png'
+import Geminimbl from '../assets/Geminimbl.jpg'
 
 const MyContext = createContext()
 
@@ -61,6 +62,18 @@ const Context = ({children}) => {
          react , tailwind ,
         "https://lenis.darkroom.engineering/favicon.ico",
         Gsap,
+      ],
+    },
+    {
+      title: "Gemini Clone",
+      name : "Gemini Clone",
+      date: "March 25, 2025",
+      Weblink : "https://wqsrzaaaa.github.io/GeminiClone/",
+      desc : "A fully functional AI chatbot, built using React and API integration. This project simulates real-time conversations with AI, providing an interactive user experience.",
+      img: Gemini,
+      imgMbl : Geminimbl,
+      technologies: [
+         react , css , 
       ],
     },
   ];

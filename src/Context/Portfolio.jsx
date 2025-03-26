@@ -11,7 +11,7 @@ const Portfolio = () => {
   return (
     <div className='w-full flex flex-wrap justify-center !pt-16'>
       <div className='md:w-[800px] w-[95%] flex items-center justify-center flex-col'>
-        <div className='w-full'><img className='rounded-2xl' src={proj.img} alt="" /></div>
+        <div className='w-full'><img className='rounded-2xl shadow-div' src={proj.img} alt="" /></div>
         <div className='w-full md:!p-8 !pt-8 flex '>
           <img className='md:w-[300px] md:h-[480px] w-[200px] rounded-2xl bg-amber-200' src={proj.imgMbl} alt="" />    
           <div className='w-full flex gap-9 flex-col items-center justify-center text-white'>

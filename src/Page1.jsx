@@ -5,7 +5,7 @@ import { PiCursorClickThin } from "react-icons/pi";
 
 const Page1 = ({effectCursor , seteffectCursor}) => {
   return (
-    <div className='w-full h-screen overflow-hidden front-page-bg relative'>
+    <div className='w-full z-9 h-screen overflow-hidden front-page-bg relative'>
     
        <div id='bottom-shadow' className='w-full h-[80px] bg-black absolute z-90 bottom-0 left-0'></div>
 

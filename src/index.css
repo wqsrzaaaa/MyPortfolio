@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 
 body{
   overflow-x: hidden;
@@ -320,4 +324,11 @@ section{
 @keyframes fadeOut {
   0% { opacity: 1; transform: scale(.5); }
   100% { opacity: 0; transform: scale(2); }
+}
+.shadow-div{
+  box-shadow: 0 0 10px black;
+}
+.view-proj:hover{
+  box-shadow: 0 0 15px rgb(54, 180, 54);
+  transition: .5s;
 }

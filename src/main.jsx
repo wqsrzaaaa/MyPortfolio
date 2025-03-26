@@ -9,5 +9,5 @@ createRoot(document.getElementById('root')).render(
     <Context>
       <App />
     </Context>
-  </StrictMode>,
+  </StrictMode>
 )
