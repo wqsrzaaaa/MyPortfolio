@@ -109,6 +109,27 @@ const Work = () => {
               <div className='w-full h-[120px] flex items-center justify-center'>
                 <h1>{e.title}</h1>
               </div>
+              <button   onClick={() => {
+                        navigate('/portfolio', { state: { 
+                          title: e.title, 
+                          img: e.img, 
+                          imgMbl : e.imgMbl,
+                          name : e.name,
+                          desc : e.desc,
+                          date : e.date,
+                          Weblink : e.Weblink,
+                          technologies: e.technologies.map(tech => 
+                            typeof tech === "string" ? tech : tech.name
+                          )
+                        }});
+                      }} 
+                  className="btn absolute left-1/2 -translate-x-1/2 rounded-[10px] overflow-hidden -bottom-5">
+                    <svg  width="150px" height="50px" viewBox="0 0 180 60" className="border ">
+                      <polyline points="179,1 179,59 1,59 1,1 179,1" className="bg-line" />
+                      <polyline points="179,1 179,59 1,59 1,1 179,1" className="hl-line" />
+                    </svg>
+                    <span>Explore</span>
+                  </button>
             </SwiperSlide>
           ))}
         </Swiper>
