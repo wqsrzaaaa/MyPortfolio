@@ -81,7 +81,7 @@ const Work = () => {
             clickable: true,
             dynamicBullets: true,
           }}
-          modules={[Pagination]} // ✅ NO Lazy module here
+          modules={[Pagination]} 
           className="mySwiper w-[95%] md:w-full h-[80vh]"
           breakpoints={{
             320: { slidesPerView: 1 },
@@ -91,11 +91,10 @@ const Work = () => {
           {Data.map((e, i) => (
             <SwiperSlide key={i} className="bg-zinc-800 flex !ml-0 relative items-center justify-center text-xl font-bold">
               <div className='w-full h-[50vh] relative flex items-center justify-center'>
-                {/* ✅ Native lazy loading */}
                 <img 
                   className='w-[95%] rounded-2xl h-[47vh] object-cover' 
                   src={e.img} 
-                  loading="lazy" // ✅ Just add this
+                  loading="lazy" 
                   alt="" 
                 />
                 <div id='image-divs' className='absolute z-3 w-[350px] flex justify-center gap-3 -bottom-10'>

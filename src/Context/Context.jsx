@@ -12,7 +12,7 @@ import redefinembl from '../assets/redefinembl.jpg'
 import coffeembl from '../assets/coffeembl.jpg'
 import needlembl from '../assets/needlembl.jpg'
 import Gemini from '../assets/Gemini.png'
-import Geminimbl from '../assets/Geminimbl.jpg'
+import Geminimbl from '../assets/GeminiMobile.jpg'
 
 const MyContext = createContext()
 

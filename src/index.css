@@ -313,7 +313,7 @@ section{
   position: absolute;
   width: 9px;
   height: 9px;
-  background :rgb(17, 17, 43);
+  background :rgb(122, 122, 178);
   border-radius: 50%;
   pointer-events: none;
   transition: opacity 0.3s ease;
