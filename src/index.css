@@ -85,6 +85,40 @@ section{
   left: initial;
   animation-duration: 3s;
 }
+#about-btn {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.3em 0.8em 0.9em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(to right, #121027, rgb(77, 77, 250), #121027);
+  border: none;
+  letter-spacing: 0.05em;
+  border-radius: 16px;
+}
+
+#about-btn svg {
+  margin-right: 3px;
+  transform: rotate(30deg);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+#about-btn span {
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+#about-btn:hover svg {
+  transform: translateX(5px) rotate(90deg);
+}
+
+#about-btn:hover span {
+  transform: translateX(7px);
+}
+
 #section span:nth-child(2){
   top: 0px;
   right: 700px;
@@ -154,45 +188,6 @@ section{
 .my-work li{
   margin-left: 20px;
 }
-
-#Contact-btn {
-  width: 300px;
-  height: 60px;
-  position: relative;
-  z-index: 1;
-  background: #1d4ed8; 
-  color: white;
-  font-weight: bold;
-  overflow: hidden;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out; /* Smooth background transition */
-}
-
-#Contact-btn::before {
-  content: '';
-  width: 300%;
-  height: 100%;
-  position: absolute;
-  top: 100%;
-  left: -300%;
-  z-index: -1;
-  background: linear-gradient(90deg, green, yellow, blue, green);
-  transition: transform 3s ease-in-out;
-  animation: circularMove 6s linear infinite ;
-}
-#Contact-btn:hover::before{
-  top: 0;
-}
-@keyframes circularMove {
-  0% {left: -320%}
-  100%{left: 100%;}
-}
-
 @keyframes skillAnime {
   0% {
     transform: translateY(0);
@@ -208,7 +203,7 @@ section{
 .group #index0, .group2 #index0,
 .group #index1, .group2 #index1,
 .group #index2, .group2 #index2, 
-.group #index3, .group2 #index3 {
+.group #index3, .group2 #index3 ,.group2 #index4  {
   animation: skillAnime 3s ease-in-out infinite;
   will-change: transform;
   transform: translateZ(0);

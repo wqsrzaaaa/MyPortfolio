@@ -1,6 +1,8 @@
 import React from "react";
 import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaGithub, FaFigma } from "react-icons/fa";
-import { SiTailwindcss, SiFramer, SiRedux } from "react-icons/si";
+import { SiTailwindcss, SiRedux } from "react-icons/si";
+import { FaBootstrap } from "react-icons/fa";
+import frammer from '../assets/frammer.webp'
 
 const skills = [
   { name: "React.js", icon: <FaReact className="text-blue-400" /> },
@@ -13,8 +15,9 @@ const skills = [
 const Frameworks = [
   { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400" /> },
   { name: "Redux", icon: <SiRedux className="text-purple-500" /> },
-  { name: "Framer Motion", icon: <SiFramer className="text-pink-500" /> },
+  { name: "Bootstrap", icon: <FaBootstrap className="text-purple-800" /> },
   { name: "GitHub", icon: <FaGithub className="text-gray-300" /> },
+  { name: "Frammer Motion", icon: <img src={frammer} className="w-[80px] " /> },
 ]
 
 const Skills = () => {
@@ -55,7 +58,7 @@ const Skills = () => {
         {Frameworks.map((skill, index) => (
           <div
             key={index}
-            className="group2"
+            className="group2 pointer-events-none"
           >
             <div id={`index${index}`} className="text-5xl mb-2 group-hover:animate-pulse">{skill.icon}</div>
           </div>

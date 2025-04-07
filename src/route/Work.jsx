@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState, lazy, Suspense } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -7,14 +7,16 @@ import { MyContext } from '../Context/Context';
 import { Navigate, useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Gamejs from './sourceCodes/Game'
-import DiceRoller from './sourceCodes/DiceRoller';
+const DiceRoller = lazy(()=> import('./sourceCodes/DiceRoller'))
+const Gamejs = lazy(()=> import('./sourceCodes/Game'))
+
 gsap.registerPlugin(ScrollTrigger);
 
 
 const Work = () => {
 
 
+  const [showGame, setShowGame] = useState(false);
 
 
 
@@ -53,6 +55,10 @@ const Work = () => {
         },
       }
     );
+
+    setTimeout(() => {
+      setShowGame(true);
+    }, 300);
 
     return () => {
       tl.kill(); 
@@ -134,8 +140,12 @@ const Work = () => {
         </Swiper>
       </div>
        </div>
-       <DiceRoller/>
-      <Gamejs/>
+       {showGame && (
+          <Suspense fallback={<div className="text-white text-center !mb-9 mt-5">Loading game...</div>}>
+            <DiceRoller />
+            <Gamejs />
+          </Suspense>
+        )}
     </div>
     </>
   );
