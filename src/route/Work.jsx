@@ -142,7 +142,7 @@ const Work = () => {
        </div>
        {showGame && (
           <Suspense fallback={<div className="text-white text-center !mb-9 mt-5">Loading game...</div>}>
-            <DiceRoller />
+            <DiceRoller gsap={gsap} />
             <Gamejs />
           </Suspense>
         )}

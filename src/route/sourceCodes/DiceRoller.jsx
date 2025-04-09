@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import diceRoller from '../../assets/diceRoller.mp4'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const DiceRoller = () => {
-
+const DiceRoller = ({gsap }) => {
+  
+  if (!gsap) return
 
   const diceRoll = `
   import React, { useState } from 'react';
@@ -147,8 +149,24 @@ const DiceRoller = () => {
     background: white;
     border-radius: 50%;
   }`;
+  useEffect(() => {
+    if (!gsap) return;
 
-
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.fromTo('#Project2', 
+      { background : "transparent" }, 
+      { 
+        background : "#52525b", 
+        duration: 1.2, 
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: '#Project2',
+          start: 'top 25%',
+          toggleActions: 'play none none reverse',
+        }
+      }
+    );
+  }, [gsap]);
 
 
 
