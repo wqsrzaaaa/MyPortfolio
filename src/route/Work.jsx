@@ -58,7 +58,7 @@ const Work = () => {
 
     setTimeout(() => {
       setShowGame(true);
-    }, 300);
+    }, 100);
 
     return () => {
       tl.kill(); 

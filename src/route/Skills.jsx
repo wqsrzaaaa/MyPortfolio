@@ -16,8 +16,8 @@ const Frameworks = [
   { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400" /> },
   { name: "Redux", icon: <SiRedux className="text-purple-500" /> },
   { name: "Bootstrap", icon: <FaBootstrap className="text-purple-800" /> },
-  { name: "GitHub", icon: <FaGithub className="text-gray-300" /> },
-  { name: "Frammer Motion", icon: <img src={frammer} className="w-[80px] " /> },
+  { name: "GitHub", icon: <FaGithub className="text-gray-300 " /> },
+  { name: "Frammer Motion", icon: <img src={frammer} className="max-w-[80px] " /> },
 ]
 
 const Skills = () => {
