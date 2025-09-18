@@ -203,7 +203,7 @@ section{
 .group #index0, .group2 #index0,
 .group #index1, .group2 #index1,
 .group #index2, .group2 #index2, 
-.group #index3, .group2 #index3 ,.group2 #index4  {
+.group #index3, .group #index4, .group2 #index3 ,.group2 #index4  {
   animation: skillAnime 3s ease-in-out infinite;
   will-change: transform;
   transform: translateZ(0);
