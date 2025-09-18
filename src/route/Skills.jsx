@@ -6,11 +6,11 @@ import frammer from '../assets/frammer.webp'
 import { SiNextdotjs } from "react-icons/si";
 
 const skills = [
+  { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
   { name: "React.js", icon: <FaReact className="text-blue-400" /> },
   { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
   { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
   { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" /> },
-  { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
 
 ];
 
